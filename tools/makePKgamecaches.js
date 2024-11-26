@@ -9,6 +9,8 @@
 
 
 let CommonFunc = require("./Comm/CommonFunc") 
+let CopyFolder = require("./Comm/CopyFolder")  
+
 const fs = require('fs')
 var path = require("path"); 
 
@@ -18,9 +20,9 @@ let copyToPath = "" // 复制文件到
 
 //-------------------------------- 获取shell 参数
 let urlMap = { 
-    mac_Home :  "http://192.168.69.197:8089/dashboard/hotRes/",
+    mac_Home :  "http://192.168.20.196:8000/hotRes/",
 }
-let hotUrl = "http://192.168.69.197:8089/dashboard/hotRes/" 
+let hotUrl = "http://192.168.20.196:8000/hotRes/" 
 
 if(typeof(process)!="undefined"){  
     hotUrl = urlMap[process.argv[2]];
@@ -68,23 +70,32 @@ for(let idx in folders){
 
         let pathOri = obj.path + obj.filename
 
+        let bPath = pathOri.replace(remoteRoot, "")
+        // console.log("bPath:", bPath )
         // 构造 cacheList 
         co = co+1 
         let key = pathOri.replace(remoteRoot, hotUrl+"remote/")
         let oneCache = {
             bundle : abName ,
-            url : abName +"/1111" + (lastTime+co) + path.extname(obj.filename),
+            url : bPath,
             lastTime : lastTime-co
         }
 
         cacheList.files[key] = oneCache
 
-        fs.copyFileSync(pathOri, copyToPath + oneCache.url)
+        // fs.copyFileSync(pathOri, copyToPath + oneCache.url)
         // fs.copyFileSync(pathOri, cpTo+obj.filename)
 
         // console.log("create_key_:", key )
     }
 }
+
+CopyFolder.copyFolder({
+    dirOri : remoteRoot,
+    dirDst : copyToPath , 
+    isDelOld : true ,
+    // isIgnoreExist : true ,
+})
 
 // 保存cacheList
 

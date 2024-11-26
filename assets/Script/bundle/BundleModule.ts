@@ -36,6 +36,10 @@ export default class BundleModule {
         if(this._useHotUpdate){
             // 如果希望使用creator构建时填的资源服务器地址,将下面这行代码注释掉即可.
             abUrl = ModuleConst.hotUrl + "remote/" + this._ABName
+        // } else {
+        //     let writablePath = jsb.fileUtils.getWritablePath() 
+        //     let path_cache  = writablePath + "gamecaches/" 
+        //     abUrl = path_cache +  this._ABName
         }
         BundleUtil.LOG(CodeType.BundleModule, "loadAB_:", this._ABName, abUrl  )
         cc.assetManager.loadBundle(abUrl,  loadArg, (err, bundle)=> {

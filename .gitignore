@@ -1,2 +1,5 @@
 .DS_Store
 temp
+build
+local
+library
