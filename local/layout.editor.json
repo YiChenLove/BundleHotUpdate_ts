@@ -5,21 +5,21 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": 0,
-      "y": 38,
+      "x": 1,
+      "y": 39,
       "width": 1512,
       "height": 888,
       "layout": {
         "type": "dock-h",
         "children": [
           {
-            "width": 204,
-            "height": 455,
+            "width": 303.578125,
+            "height": 801,
             "type": "dock-v",
             "children": [
               {
-                "width": 204,
-                "height": 226,
+                "width": 303.578125,
+                "height": 399,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -27,8 +27,8 @@
                 ]
               },
               {
-                "width": 204,
-                "height": 226,
+                "width": 303.578125,
+                "height": 399,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -38,13 +38,13 @@
             ]
           },
           {
-            "width": 504,
-            "height": 395,
+            "width": 750.03125,
+            "height": 801,
             "type": "dock-v",
             "children": [
               {
-                "width": 504,
-                "height": 126,
+                "width": 750.03125,
+                "height": 256.5,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -52,8 +52,8 @@
                 ]
               },
               {
-                "width": 504,
-                "height": 266,
+                "width": 750.03125,
+                "height": 541.484375,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -65,8 +65,8 @@
             ]
           },
           {
-            "width": 304,
-            "height": 226,
+            "width": 452.390625,
+            "height": 801,
             "type": "panel",
             "active": 0,
             "children": [
@@ -85,7 +85,9 @@
         "inspector"
       ]
     },
-    " common-asset-worker-worker": {}
+    " common-asset-worker-worker": {},
+    "window-1732603430466": {},
+    " build-worker-worker": {}
   },
   "panels": {
     "project-settings": {

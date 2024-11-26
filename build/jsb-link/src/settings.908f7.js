@@ -22,11 +22,11 @@ window._CCSettings = {
     debug: true,
     jsList: [],
     bundleVers: {
+        internal: "cb4f5",
         ABLobby: "fa688",
         ABSubGame1: "35dae",
         ABSubGame2: "c2a9c",
         resources: "0b236",
-        internal: "cb4f5",
-        main: "95065"
+        main: "51b37"
     }
 };

@@ -86,8 +86,8 @@ window.boot = function () {
 
     var option = {
         id: 'GameCanvas',
-        debugMode: settings.debug ? cc.debug.DebugMode.INFO : cc.debug.DebugMode.ERROR,
-        showFPS: settings.debug,
+        debugMode: cc.debug.DebugMode.INFO,
+        showFPS: false,
         frameRate: 60,
         groupList: settings.groupList,
         collisionMatrix: settings.collisionMatrix,
@@ -123,7 +123,7 @@ window.boot = function () {
 if (window.jsb) {
     var isRuntime = (typeof loadRuntime === 'function');
     if (isRuntime) {
-        require('src/settings.418b9.js');
+        require('src/settings.908f7.js');
         require('src/cocos2d-runtime.js');
         if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
             require('src/physics.63f8c.js');
@@ -131,7 +131,7 @@ if (window.jsb) {
         require('jsb-adapter/engine/index.js');
     }
     else {
-        require('src/settings.418b9.js');
+        require('src/settings.908f7.js');
         require('src/cocos2d-jsb.bb4f7.js');
         if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
             require('src/physics.63f8c.js');

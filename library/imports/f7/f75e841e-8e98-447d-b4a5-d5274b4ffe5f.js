@@ -267,7 +267,7 @@ var BundleManager = /** @class */ (function (_super) {
         if (!moduleObj) {
             // 未加载过, 更新后不需要重启
             moduleObj = new BundleModule_1.default();
-            loadVerFunc(moduleObj.init(moduleName), romoteVer, function () {
+            loadVerFunc(moduleObj.init(moduleName, false), romoteVer, function () {
                 _this.modules[moduleName] = moduleObj;
                 callback && callback(ret);
             });

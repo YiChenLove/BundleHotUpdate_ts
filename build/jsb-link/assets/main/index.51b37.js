@@ -339,7 +339,7 @@ window.__require = function e(t, n, r) {
           });
         } else {
           moduleObj = new BundleModule_1.default();
-          loadVerFunc(moduleObj.init(moduleName), romoteVer, function() {
+          loadVerFunc(moduleObj.init(moduleName, false), romoteVer, function() {
             _this.modules[moduleName] = moduleObj;
             callback && callback(ret);
           });
@@ -655,7 +655,7 @@ window.__require = function e(t, n, r) {
       };
       BundleUnpackHelper.prototype.getFileListFromDir = function(dir, filelist) {
         var co = 1;
-        if (cc.sys.os == cc.sys.OS_ANDROID) {
+        if (cc.sys.os == cc.sys.OS_ANDROID || cc.sys.os == cc.sys.OS_IOS || cc.sys.os == cc.sys.OS_WINDOWS) {
           var cacheJson = jsb.fileUtils.getStringFromFile(dir + "cacheList.json");
           var cacheMap = JSON.parse(cacheJson);
           var files = cacheMap.files;

@@ -284,7 +284,7 @@ export default class BundleManager extends SingleIns{
         if(!moduleObj){
             // 未加载过, 更新后不需要重启
             moduleObj = new BundleModule();
-            loadVerFunc( moduleObj.init(moduleName), romoteVer, ()=>{
+            loadVerFunc( moduleObj.init(moduleName, false), romoteVer, ()=>{
                 this.modules[moduleName] = moduleObj
                 callback && callback(ret);
             }) 

@@ -4,11 +4,11 @@ import { ModuleConst } from "./Const";
 export default class BundleModule {
 
     _ABName: string;
-    _useHotUpdate: any;
+    _useHotUpdate: boolean;
     _abObj: any;
     _timeOutIds: number[];
 
-    init(ABName, useHotUpdate){
+    init(ABName: string, useHotUpdate: boolean){
        BundleUtil.LOG(CodeType.BundleModule, "module_init")
         
         this._ABName = ABName
