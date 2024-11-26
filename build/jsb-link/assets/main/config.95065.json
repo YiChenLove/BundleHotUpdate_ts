@@ -1,0 +1,66 @@
+{
+    "paths": {},
+    "uuids": [
+        "29FYIk+N1GYaeWH/q1NxQO",
+        "2dL3kvpAxJu6GJ7RdqJG5J",
+        "67By4L0StKO6vpo8nhzqt7",
+        "71VhFCTINJM6/Ky3oX9nBT",
+        "987osZYktMxLWZ279KEtYx",
+        "b4P/PCArtIdIH38t6mlw8Y",
+        "e8Ueib+qJEhL6mXAHdnwbi",
+        "e97GVMl6JHh5Ml5qEDdSGa",
+        "ecpdLyjvZBwrvm+cedCcQy",
+        "f0BIwQ8D5Ml7nTNQbh1YlS"
+    ],
+    "scenes": {
+        "db://assets/Scene/helloworld.fire": "2dL3kvpAxJu6GJ7RdqJG5J"
+    },
+    "redirect": [
+        "987osZYktMxLWZ279KEtYx",
+        0,
+        "ecpdLyjvZBwrvm+cedCcQy",
+        1
+    ],
+    "deps": [
+        "resources",
+        "internal"
+    ],
+    "packs": {
+        "05d815c20": [
+            "67By4L0StKO6vpo8nhzqt7",
+            "71VhFCTINJM6/Ky3oX9nBT",
+            "b4P/PCArtIdIH38t6mlw8Y",
+            "e8Ueib+qJEhL6mXAHdnwbi"
+        ],
+        "05db87797": [
+            "29FYIk+N1GYaeWH/q1NxQO",
+            "2dL3kvpAxJu6GJ7RdqJG5J",
+            "e97GVMl6JHh5Ml5qEDdSGa",
+            "f0BIwQ8D5Ml7nTNQbh1YlS"
+        ]
+    },
+    "name": "main",
+    "importBase": "import",
+    "nativeBase": "native",
+    "debug": true,
+    "isZip": false,
+    "encrypted": false,
+    "versions": {
+        "import": [
+            "05d815c20",
+            "56856",
+            "05db87797",
+            "df19c"
+        ],
+        "native": [
+            "67By4L0StKO6vpo8nhzqt7",
+            "cea68",
+            "71VhFCTINJM6/Ky3oX9nBT",
+            "c06a9",
+            "b4P/PCArtIdIH38t6mlw8Y",
+            "83fcc",
+            "e8Ueib+qJEhL6mXAHdnwbi",
+            "90cf4"
+        ]
+    }
+}
