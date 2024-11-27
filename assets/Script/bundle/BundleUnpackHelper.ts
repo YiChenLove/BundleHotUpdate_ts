@@ -33,6 +33,17 @@ export default class BundleUnpackHelper extends SingleIns{
         
         if( GlobalConst.Client_Version == localClientVer && jsb.fileUtils.isFileExist(path_cache+"cacheList.json")){
             BundleUtil.LOG(CodeType.BundleUnpackHelper, "Unpackage_not_exec")
+            let versionData = cc.sys.localStorage.getItem(ModuleConst.localVersionConfigKey)
+            let localVersionData2 = cc.sys.localStorage.getItem(ModuleConst.localVersionConfigKey2)
+            let moudles = JSON.parse(versionData).modules;
+            let localAbversion = JSON.parse(localVersionData2);
+
+            for (let key in localAbversion) {
+                if (!moudles[key] || moudles[key].resVersion == localAbversion[key]) {
+                    cc.assetManager.loadBundle(path_cache + key, { version: localAbversion[key] }, (err, bundle)=> {
+                    });
+                }
+            }
             onComplete()
             return ; 
 
@@ -44,7 +55,7 @@ export default class BundleUnpackHelper extends SingleIns{
             BundleUtil.LOG(CodeType.BundleUnpackHelper, "unpackage_res_:", path_native, path_cache )
 
             if(!jsb.fileUtils.isDirectoryExist(path_native)){
-                BundleUtil.LOG(CodeType.BundleUnpackHelper, "PKgamecaches_not_exist")
+                BundleUtil.LOG(CodeType.BundleUnpackHelper, "PKgamecaches_not_exist")                
                 cc.sys.localStorage.setItem(ModuleConst.localClientVer, GlobalConst.Client_Version )
                 onComplete()
                 return ; 
@@ -83,10 +94,15 @@ export default class BundleUnpackHelper extends SingleIns{
 
                     this._bundleMgr.setLocalAbVersion(abVersion)
 
-
+                    cc.sys.localStorage.setItem(ModuleConst.localVersionConfigKey2, JSON.stringify(abVersion))
                     cc.sys.localStorage.setItem(ModuleConst.localClientVer, GlobalConst.Client_Version )
                     onComplete()
                 })
+
+                for (let key in abVersion) {
+                    cc.assetManager.loadBundle(path_cache + key, { version: abVersion[key] }, (err, bundle)=> {
+                    });
+                }
             }
             //--------------------------------------------------<<  替换 cacheManager 数据
 

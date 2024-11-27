@@ -26,7 +26,7 @@
     "packageName": "org.cocos2d.demo"
   },
   "ios": {
-    "REMOTE_SERVER_ROOT": "",
+    "REMOTE_SERVER_ROOT": "http://192.168.20.196:8000/hotRes/",
     "packageName": "org.cocos2d.demo",
     "ios_enable_jit": true
   },
