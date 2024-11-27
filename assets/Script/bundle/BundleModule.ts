@@ -13,6 +13,7 @@ export default class BundleModule {
         
         this._ABName = ABName
         this._useHotUpdate = useHotUpdate
+        this._timeOutIds = [];
         return this
     }
 
