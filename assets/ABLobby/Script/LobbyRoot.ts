@@ -1,4 +1,4 @@
-import BundleManager from "../../../Script/bundle/BundleManager";
+import BundleManager from "../../Script/bundle/BundleManager";
 
 let JS_LOG = function(...arg){ 
     cc.log("[LobbyRoot]",...arg) ; 
