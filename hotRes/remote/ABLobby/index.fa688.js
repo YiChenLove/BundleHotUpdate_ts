@@ -77,7 +77,6 @@ window.__require = function e(t, n, r) {
       }
       LobbyRoot.prototype.initModule = function() {
         JS_LOG("initModule");
-        cc.log("---------\x3edddxin");
       };
       LobbyRoot.prototype.onBtn_loadGame_1 = function() {
         var _this = this;

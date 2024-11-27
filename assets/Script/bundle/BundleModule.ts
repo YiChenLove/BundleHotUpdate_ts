@@ -5,7 +5,7 @@ export default class BundleModule {
 
     _ABName: string;
     _useHotUpdate: boolean;
-    _abObj: any;
+    _abObj: cc.AssetManager.Bundle;
     _timeOutIds: number[];
 
     init(ABName: string, useHotUpdate: boolean){
@@ -68,22 +68,6 @@ export default class BundleModule {
 
         //---------------------------------------------------------
         let autoAtlas = []
-        let resMap = this._abObj._config.assetInfos._map
-        for(let idx in resMap){
-            let item = resMap[idx]
-            if(!item.path && item.nativeVer){
-                let urll = cc.assetManager.utils.getUrlWithUuid(item.uuid, {
-                    __nativeName__: ".png",
-                    nativeExt: cc.path.extname(".png"),
-                    isNative: true
-                }); 
-                if(urll){
-                    autoAtlas.push(urll)
-                }
-            }
-        }
-
-        BundleUtil.LOG(CodeType.BundleModule, "autoatlas_url_arr_:", JSON.stringify(autoAtlas))
         let extNum = autoAtlas.length 
         let finishNum = 0
         let is_2Valid = true
