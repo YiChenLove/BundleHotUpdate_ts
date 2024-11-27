@@ -22,7 +22,7 @@ export default class LobbyRoot extends cc.Component {
     	this.loadSubGame("ABSubGame1", (moduleObj)=>{
     		let abObj = moduleObj.getABObj()
                 
-            abObj.load('root/Scene/SubGame1', cc.Prefab, (err, prefab)=>{
+            abObj.load('Scene/SubGame1', cc.Prefab, (err, prefab)=>{
                 JS_LOG("load_game1_prefab_:", JSON.stringify(err) ) 
                 let _node = cc.instantiate(prefab) 
                 this.node.addChild(_node, 100)
@@ -57,7 +57,7 @@ export default class LobbyRoot extends cc.Component {
     	this.loadSubGame("ABSubGame2", (moduleObj)=>{
     		let abObj = moduleObj.getABObj()
                 
-            abObj.load('root/Scene/SubGame2', cc.Prefab, (err, prefab)=>{
+            abObj.load('Scene/SubGame2', cc.Prefab, (err, prefab)=>{
                 JS_LOG("load_game2_prefab_:", JSON.stringify(err) ) 
                 let _node = cc.instantiate(prefab) 
                 this.node.addChild(_node, 100)

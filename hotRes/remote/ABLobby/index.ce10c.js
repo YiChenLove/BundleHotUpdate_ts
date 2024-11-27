@@ -84,7 +84,7 @@ window.__require = function e(t, n, r) {
         this.removeGame_1();
         this.loadSubGame("ABSubGame1", function(moduleObj) {
           var abObj = moduleObj.getABObj();
-          abObj.load("root/Scene/SubGame1", cc.Prefab, function(err, prefab) {
+          abObj.load("Scene/SubGame1", cc.Prefab, function(err, prefab) {
             JS_LOG("load_game1_prefab_:", JSON.stringify(err));
             var _node = cc.instantiate(prefab);
             _this.node.addChild(_node, 100);
@@ -105,7 +105,7 @@ window.__require = function e(t, n, r) {
         this.removeGame_2();
         this.loadSubGame("ABSubGame2", function(moduleObj) {
           var abObj = moduleObj.getABObj();
-          abObj.load("root/Scene/SubGame2", cc.Prefab, function(err, prefab) {
+          abObj.load("Scene/SubGame2", cc.Prefab, function(err, prefab) {
             JS_LOG("load_game2_prefab_:", JSON.stringify(err));
             var _node = cc.instantiate(prefab);
             _this.node.addChild(_node, 100);

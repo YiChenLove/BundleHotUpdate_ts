@@ -1,34 +1,34 @@
 {
     "paths": {
         "6eDnIw0UFCdZQQv4+/eZV1": [
-            "root/Scene/SubGame1",
+            "Scene/SubGame1",
             "cc.Prefab"
         ],
         "71t8b3y+dO15MDY9MskWeE": [
-            "root/Texture/g1pic4",
+            "Texture/g1pic4",
             "cc.Texture2D"
         ],
         "aesTFuFaRIeYniW+Nj+Bbl": [
-            "root/Texture/g1pic4",
+            "Texture/g1pic4",
             "cc.SpriteFrame",
             1
         ],
         "65V+JLm/FL+KOXmzmT53Z3": [
-            "root/Texture/p1/AutoAtlas_game1",
+            "Texture/p1/AutoAtlas_game1",
             "cc.SpriteAtlas"
         ],
         "5e1dajI9BGW5H111k4UJzc": [
-            "root/Texture/p1/g1pic2",
+            "Texture/p1/g1pic2",
             "cc.SpriteFrame",
             1
         ],
         "971vztitFKsa2SjVZjo2AY": [
-            "root/Texture/p1/g1pic3",
+            "Texture/p1/g1pic3",
             "cc.SpriteFrame",
             1
         ],
         "f1mn9MC81IJJ0iDCcMnieu": [
-            "root/Texture/p1/game1pic",
+            "Texture/p1/game1pic",
             "cc.SpriteFrame",
             1
         ]

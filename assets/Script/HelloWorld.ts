@@ -69,7 +69,7 @@ export default class SubGame_2 extends cc.Component {
 
                 let abObj = moduleObj.getABObj()
                 
-                abObj.load('root/Scene/LobbyRoot', cc.Prefab, (err, prefab)=>{  // 使用模块资源 
+                abObj.load('Scene/LobbyRoot', cc.Prefab, (err, prefab)=>{  // 使用模块资源 
 
                     cc.log("[HelloWorld] load_lobby_prefab_ err:", JSON.stringify(err) )
                     if(this._lobbyRootNode){

@@ -100,7 +100,7 @@ export default class BundleModule {
         }
         //--------------------------------------------------------- 
 
-        this._abObj.preloadDir("root", (finish, total, item)=>{
+        this._abObj.preloadDir("", (finish, total, item)=>{
             if(!is_Valid){ return; };
             finishNum = total
             onProgress && onProgress(finish, total + extNum, item);

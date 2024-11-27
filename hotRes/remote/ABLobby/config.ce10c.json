@@ -1,15 +1,15 @@
 {
     "paths": {
         "48gNVRlbhGMYXNkEwTTb56": [
-            "root/Scene/LobbyRoot",
+            "Scene/LobbyRoot",
             "cc.Prefab"
         ],
         "29CYxh10lPVpD0qmcamgqG": [
-            "root/Texture/lobbypic",
+            "Texture/lobbypic",
             "cc.Texture2D"
         ],
         "58eK6uN+xMZoXE2x9u+pGV": [
-            "root/Texture/lobbypic",
+            "Texture/lobbypic",
             "cc.SpriteFrame",
             1
         ]
