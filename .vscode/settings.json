@@ -4,5 +4,30 @@
         "**/hotRes": true,
         "**/library": true,
         "**/temp": true
-    }
+    },
+    // VSCode 中的 ESLint 插件默认是不会检查 `.vue`、`.ts` 或 `.tsx` 后缀的
+    "eslint.validate": ["javascript", "javascriptreact", "vue", "typescript", "typescriptreact"],
+    // 开启保存时自动修复
+    "editor.codeActionsOnSave": {
+        // eslint开启
+        "source.fixAll.eslint": "always",
+        // stylelint开启
+        "source.fixAll.stylelint": "always"
+    },
+
+    // prettier:保存时自动格式化所有支持文件：javascript/javascriptreact/typescript/typescriptreact/json/graphql
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    // 或者仅指定js文件保存自动格式化
+    // Set the default
+    //"editor.formatOnSave": false,
+    // Enable per-language
+    //"[javascript]": {
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.formatOnSave": true
+    // }
+
+    // 指定VSCode用于IntelliSense（智能感知）的ts版本，将内置版本更换为工作区版本
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
