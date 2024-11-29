@@ -39,7 +39,7 @@ export default class SubGame_2 extends cc.Component {
             cc.log("absFile_path:", assetPath )
         }
 
-        BundleManager.getInstance().initCom({
+        BundleManager.inst.initCom({
             useHotUpdate : true ,     // 是否启用热更新 
             assetPath: assetPath,
         }) 
@@ -47,15 +47,15 @@ export default class SubGame_2 extends cc.Component {
         //-------------------
 
         // 复制包内模块到可读写路径下,避免首次加载模块时从远程完整拉取
-        BundleManager.getInstance().execUnpackage(()=>{
+        BundleManager.inst.execUnpackage(()=>{
 
-            BundleManager.getInstance().reqVersionInfo(()=>{ // 获取最新版本
+            BundleManager.inst.reqVersionInfo(()=>{ // 获取最新版本
                 this.reloadLobbyRoot()
             })
         })
 
         // 定时检测更新
-        BundleManager.getInstance().reqLoopVersionInfo() 
+        BundleManager.inst.reqLoopVersionInfo() 
 
     }
 
@@ -63,9 +63,9 @@ export default class SubGame_2 extends cc.Component {
 
         let loadAb = ["ABLobby"]
         // loadAb = ["ABLobby", "ABSubGame1", "ABSubGame2"]
-        BundleManager.getInstance().hotUpdateMultiModule(loadAb,()=>{ // 更新模块到最新版本
+        BundleManager.inst.hotUpdateMultiModule(loadAb,()=>{ // 更新模块到最新版本
 
-            BundleManager.getInstance().addModule("ABLobby", (moduleObj)=>{ // 加载模块
+            BundleManager.inst.addModule("ABLobby", (moduleObj)=>{ // 加载模块
 
                 let abObj = moduleObj.getABObj()
                 

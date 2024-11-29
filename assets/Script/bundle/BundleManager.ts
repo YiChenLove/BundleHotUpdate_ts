@@ -5,7 +5,7 @@ import BundleUtil, { CodeType } from "./BundleUtil";
 import BundleUnpackHelper from "./BundleUnpackHelper";
 import { ModuleConst, GlobalConst } from "./Const";
 
-export default class BundleManager extends SingleIns{
+export default class BundleManager extends SingleIns<BundleManager>(){
     _bundleUtil: BundleUtil;
     _unpackage: BundleUnpackHelper;
     _bundleHotUIHelper: BundleHotUIHelper;
@@ -22,9 +22,9 @@ export default class BundleManager extends SingleIns{
     _timeOutIds:number[] = [];
 
     initCom(args){
-        this._bundleUtil     = BundleUtil.getInstance();
-        this._unpackage     = BundleUnpackHelper.getInstance();
-        this._bundleHotUIHelper   = BundleHotUIHelper.getInstance();
+        this._bundleUtil     = BundleUtil.inst;
+        this._unpackage     = BundleUnpackHelper.inst;
+        this._bundleHotUIHelper   = BundleHotUIHelper.inst;
 
         // jsb.fileUtils.getDefaultResourceRootPath()
         this._nativeRootPath = args.assetPath;

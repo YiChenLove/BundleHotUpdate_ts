@@ -7,16 +7,16 @@ import BundleManager from "./BundleManager";
 import { ModuleConst, GlobalConst } from "./Const";
 
 
-export default class BundleUnpackHelper extends SingleIns{
+export default class BundleUnpackHelper extends SingleIns<BundleUnpackHelper>(){
     _bundleMgr: BundleManager;
     _bundleUtil: BundleUtil;
     _bundleHotUIHelper: BundleHotUIHelper;
     _timeOutIds: number[];
 
     initCom(arg) {
-        this._bundleMgr = BundleManager.getInstance();
-        this._bundleUtil = BundleUtil.getInstance();
-        this._bundleHotUIHelper = BundleHotUIHelper.getInstance();
+        this._bundleMgr = BundleManager.inst;
+        this._bundleUtil = BundleUtil.inst;
+        this._bundleHotUIHelper = BundleHotUIHelper.inst;
     }
 
     execUnpackage(onComplete){

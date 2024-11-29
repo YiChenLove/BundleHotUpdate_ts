@@ -7,7 +7,7 @@ import BundleUtil, { CodeType } from "./BundleUtil";
 import SingleIns from "./SingleIns";
 
 
-export default class BundleHotUIHelper extends SingleIns{
+export default class BundleHotUIHelper extends SingleIns<BundleHotUIHelper>(){
 
     hideUpdating(callback){
         BundleUtil.LOG(CodeType.BundleHotUIHelper, "hideUpdating")

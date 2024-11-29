@@ -8,7 +8,7 @@ export enum CodeType {
     BundleUnpackHelper = "BundleUnpackHelper",
 }
 
-export default class BundleUtil extends SingleIns{
+export default class BundleUtil extends SingleIns<BundleUtil>(){
 
     // makeXMLHttp({url: , callback:(retInfo)=>{}})
     makeXMLHttp(args){
