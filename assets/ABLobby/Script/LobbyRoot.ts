@@ -78,9 +78,9 @@ export default class LobbyRoot extends cc.Component {
 
 
     loadSubGame(abName, callback){ 
-        BundleManager.getInstance().hotUpdateMultiModule([abName],()=>{
+        BundleManager.inst.hotUpdateMultiModule([abName],()=>{
 
-            BundleManager.getInstance().addModule(abName, (moduleObj)=>{
+            BundleManager.inst.addModule(abName, (moduleObj)=>{
                 callback(moduleObj)
             })
         })
